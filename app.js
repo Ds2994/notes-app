@@ -19,7 +19,7 @@ yargs.command({
         }
     }, 
     handler(argv) {
-        return notes.addNote(argv.title, argv.body);
+        notes.addNote(argv.title, argv.body);
     }
 }).argv
 
@@ -35,7 +35,7 @@ yargs.command({
         }
     },
     handler(argv) {
-        return notes.removeNote(argv.title);
+        notes.removeNote(argv.title);
     }
 }).argv
 
@@ -44,7 +44,7 @@ yargs.command({
     command: 'list',
     describe: 'Listing all notes!',
     handler() {
-        return console.log("Listing all of the notes!");
+        notes.listNotes();
     }
 }).argv
 
